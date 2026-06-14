@@ -1,0 +1,38 @@
+name: Question
+description: Ask for help when documentation does not cover your case
+title: "[Question]: "
+labels:
+  - question
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Check the [documentation](https://krate.github.io/docs/) first. If you're still stuck, describe your setup and question below.
+  - type: dropdown
+    id: component
+    attributes:
+      label: Topic
+      options:
+        - installation
+        - configuration
+        - applications
+        - upgrades
+        - other
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: KRATE version
+      placeholder: e.g. 1.0.0
+  - type: input
+    id: platform
+    attributes:
+      label: Platform
+      placeholder: e.g. Debian 13 (trixie)

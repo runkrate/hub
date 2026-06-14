@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://krate.github.io/docs/
+    about: Installation, configuration, and day-to-day usage guides
+  - name: Community apps (pull requests)
+    url: https://github.com/krate-client/apps-community/pulls
+    about: Contribute a new community application via pull request
+  - name: Official apps (pull requests)
+    url: https://github.com/krate-client/apps-official-source/pulls
+    about: Propose changes to an official application

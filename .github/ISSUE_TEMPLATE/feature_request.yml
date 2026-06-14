@@ -1,0 +1,49 @@
+name: Feature request
+description: Suggest an idea or improvement for KRATE
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the problem you want solved and the outcome you expect.
+  - type: dropdown
+    id: component
+    attributes:
+      label: Area
+      description: Which part of KRATE would this affect?
+      options:
+        - console (zen CLI / core engine)
+        - web (HarmonyUI dashboard)
+        - setup (first-boot wizard)
+        - apps-official-source (official applications)
+        - apps-community (community applications)
+        - apps-extensions (plugins & themes)
+        - docs (documentation)
+        - releases (packages & updates)
+        - other / cross-cutting
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What pain point or limitation are you hitting?
+      placeholder: I'm trying to … but …
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: How would you like this to work?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Other approaches you've thought about
+    validations:
+      required: false

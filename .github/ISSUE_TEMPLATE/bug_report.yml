@@ -1,0 +1,63 @@
+name: Bug report
+description: Report something that is broken or does not work as expected
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. One issue per report please.
+  - type: dropdown
+    id: component
+    attributes:
+      label: Area
+      description: Which part of KRATE is affected?
+      options:
+        - console (zen CLI / core engine)
+        - web (HarmonyUI dashboard)
+        - setup (first-boot wizard)
+        - apps-official-source (official applications)
+        - apps-community (community applications)
+        - apps-extensions (plugins & themes)
+        - docs (documentation)
+        - releases (packages & updates)
+        - other / unsure
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Clear description of the bug
+      placeholder: Tell us what you expected and what actually happened.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. …
+        2. …
+        3. …
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: KRATE version
+      description: Output of `zen version` or the `.deb` version you installed
+      placeholder: e.g. 1.0.0
+  - type: input
+    id: platform
+    attributes:
+      label: Platform
+      placeholder: e.g. Debian 13 (trixie), amd64
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs or screenshots
+      description: Paste logs or drag screenshots here
+    validations:
+      required: false
